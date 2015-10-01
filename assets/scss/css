@@ -1,0 +1,97 @@
+.nav-fontStyle, .dg-topNavigation ul, .dg-topNavigation li, .dg-topNavigation a {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1;
+  font-family: 'Lato', sans-serif; }
+
+.dg-topHeader, .dg-topNavigation {
+  background: #36b0b6;
+  background: -moz-linear-gradient(top, #36b0b6 0%, #2a8a8f 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #36b0b6), color-stop(100%, #2a8a8f));
+  background: -webkit-linear-gradient(top, #navBgDefault 0%, #2a8a8f 100%);
+  background: -o-linear-gradient(top, #navBgDefault 0%, #2a8a8f 100%);
+  background: -ms-linear-gradient(top, #navBgDefault 0%, #2a8a8f 100%);
+  background: linear-gradient(top, #navBgDefault 0%, #2a8a8f 100%); }
+
+.dg-border-radius, .dg-todo, .dg-topNavigation, .dg-topNavigation ul, .dg-topNavigation li.active a, .dg-topNavigation li:hover a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+
+.dg-todo {
+  border: solid 2px black;
+  background: #36b0b6; }
+
+.dg-topNavigation {
+  width: auto;
+  padding-left: 300px; }
+  .dg-topNavigation ul {
+    zoom: 1;
+    background: #36b0b6;
+    background: -moz-linear-gradient(top, #36b0b6 0%, #2a8a8f 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #36b0b6), color-stop(100%, #2a8a8f));
+    background: -webkit-linear-gradient(top, #navBgDefault 0%, #2a8a8f 100%);
+    background: -o-linear-gradient(top, #navBgDefault 0%, #2a8a8f 100%);
+    background: -ms-linear-gradient(top, #navBgDefault 0%, #2a8a8f 100%);
+    background: linear-gradient(top, #navBgDefault 0%, #2a8a8f 100%);
+    padding: 5px 10px; }
+    .dg-topNavigation ul:before {
+      content: '';
+      display: block; }
+    .dg-topNavigation ul:after {
+      content: '';
+      display: table;
+      clear: both; }
+  .dg-topNavigation li {
+    display: inline;
+    float: left;
+    margin: 0 5px 0 0;
+    border: 1px solid transparent; }
+    .dg-topNavigation li a {
+      padding: 8px 15px 9px 15px;
+      display: block;
+      text-decoration: none;
+      color: #ffffff;
+      border: 1px solid transparent;
+      font-size: 16px; }
+    .dg-topNavigation li ul {
+      display: none;
+      position: absolute;
+      z-index: 99999; }
+    .dg-topNavigation li.active {
+      border: 1px solid #36b0b6; }
+      .dg-topNavigation li.active a {
+        display: block;
+        background: #1e6468;
+        border: 1px solid #133e40;
+        -moz-box-shadow: inset 0 5px 10px #133e40;
+        -webkit-box-shadow: inset 0 5px 10px #133e40;
+        box-shadow: inset 0 5px 10px #133e40; }
+    .dg-topNavigation li:hover {
+      border: 1px solid #36b0b6; }
+      .dg-topNavigation li:hover a {
+        display: block;
+        background: #1e6468;
+        border: 1px solid #133e40;
+        -moz-box-shadow: inset 0 5px 10px #133e40;
+        -webkit-box-shadow: inset 0 5px 10px #133e40;
+        box-shadow: inset 0 5px 10px #133e40; }
+      .dg-topNavigation li:hover > ul {
+        display: block; }
+        .dg-topNavigation li:hover > ul li {
+          display: block;
+          float: none; }
+          .dg-topNavigation li:hover > ul li a {
+            background-color: transparent;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border: none; }
+            .dg-topNavigation li:hover > ul li a:hover {
+              background: #1e6468; }
+
+/*# sourceMappingURL=css.map */

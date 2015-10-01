@@ -1,0 +1,140 @@
+$bgDefault      : #063D5F;
+$bgHighlight    : #93B9EA;
+$colDefault     : #ecf0f1;
+$colHighlight   : #ffbbbc;
+$dropDown       : false;
+$navBgDefault:#36b0b6;
+$navBgDefaultTrans:#2a8a8f;
+$navBgHighlight:#1e6468;
+$navBorderColor:#133e40;
+$navBorderRadius:5px;
+$navFontColor:#ffffff;
+$navFontSize:16px;
+.nav-fontStyle{
+  list-style:none;
+  margin:0;
+  padding:0;
+  border:0;
+  line-height:1;
+  font-family:'Lato', sans-serif;
+}
+
+.dg-topHeader{
+  background:$navBgDefault;
+  background:-moz-linear-gradient(top,$navBgDefault 0%,$navBgDefaultTrans 100%);
+  background:-webkit-gradient(linear,left top, left bottom, color-stop(0%, $navBgDefault),color-stop(100%, $navBgDefaultTrans));
+  background:-webkit-linear-gradient(top, #navBgDefault 0%, $navBgDefaultTrans 100%);
+  background:-o-linear-gradient(top, #navBgDefault 0%, $navBgDefaultTrans 100%);
+  background:-ms-linear-gradient(top, #navBgDefault 0%, $navBgDefaultTrans 100%);
+  background:linear-gradient(top, #navBgDefault 0%, $navBgDefaultTrans 100%);
+}
+
+.dg-border-radius {
+  -webkit-border-radius:$navBorderRadius;
+  -moz-border-radius:$navBorderRadius;
+  -ms-border-radius:$navBorderRadius;
+  -o-border-radius:$navBorderRadius;
+  border-radius:$navBorderRadius;
+}
+
+.dg-todo {
+  @extend .dg-border-radius;
+  border: solid 2px black;
+  background:$navBgDefault;
+}
+
+.dg-topNavigation{
+  @extend .dg-border-radius;
+  @extend .dg-topHeader;
+  width:auto;
+  padding-left:300px;
+  ul{
+    @extend .nav-fontStyle;
+    @extend .dg-border-radius;
+    zoom:1;
+    background:$navBgDefault;
+    background:-moz-linear-gradient(top,$navBgDefault 0%,$navBgDefaultTrans 100%);
+    background:-webkit-gradient(linear,left top, left bottom, color-stop(0%, $navBgDefault),color-stop(100%, $navBgDefaultTrans));
+    background:-webkit-linear-gradient(top, #navBgDefault 0%, $navBgDefaultTrans 100%);
+    background:-o-linear-gradient(top, #navBgDefault 0%, $navBgDefaultTrans 100%);
+    background:-ms-linear-gradient(top, #navBgDefault 0%, $navBgDefaultTrans 100%);
+    background:linear-gradient(top, #navBgDefault 0%, $navBgDefaultTrans 100%);
+    padding:5px 10px;
+    &:before{
+      content:'';
+      display:block;
+    }
+    &:after{
+      content:'';
+      display:table;
+      clear:both;
+    }
+  }
+
+  li
+  {
+    @extend .nav-fontStyle;
+    display:inline;
+    float:left;
+    margin:0 5px 0 0;
+    border:1px solid transparent;
+    & a{
+      padding:8px 15px 9px 15px;
+      display:block;
+      text-decoration:none;
+      color:$navFontColor;
+      border:1px solid transparent;
+      font-size:$navFontSize;
+    }
+
+    & ul {
+      display:none;
+      position:absolute;
+      z-index:99999;
+    }
+    &.active{
+      border:1px solid $navBgDefault;
+      a {
+        @extend .dg-border-radius;
+        display:block;
+        background:$navBgHighlight;
+        border:1px solid $navBorderColor;
+        -moz-box-shadow:inset 0 5px 10px $navBorderColor;
+        -webkit-box-shadow: inset 0 5px 10px $navBorderColor;
+        box-shadow: inset 0 5px 10px $navBorderColor;
+      }
+    }
+    &:hover{
+      border:1px solid $navBgDefault;
+      a {
+        @extend .dg-border-radius;
+        display:block;
+        background:$navBgHighlight;
+        border:1px solid $navBorderColor;
+        -moz-box-shadow:inset 0 5px 10px $navBorderColor;
+        -webkit-box-shadow: inset 0 5px 10px $navBorderColor;
+        box-shadow: inset 0 5px 10px $navBorderColor;
+      }
+      > ul{
+        display:block;
+        & li{
+          display:block;
+          float:none;
+          a{
+            background-color:transparent;
+            -moz-box-shadow:none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border:none;
+            &:hover{
+              background:$navBgHighlight;
+            }
+          }
+        }
+      }
+    }
+  }
+  a{
+    @extend .nav-fontStyle;
+  }
+}

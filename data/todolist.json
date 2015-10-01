@@ -1,0 +1,8 @@
+{"success":true,
+"todoList":[{
+	"name":"TestReminder",
+	"time":"3:20 PM",
+	"date" : "Friday July 30, 2015",
+	"frequency" : "Once time event"
+}]
+}

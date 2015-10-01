@@ -1,0 +1,9 @@
+<div class="loginForm" ng-controller="loginController" ng-init="hasFocus = true;">
+<img src="assets/img/dgsuitelogo.png">
+<form class="form-signin" ng-submit="login(credentials)">
+<p><label>Username</label><input class="form-control" type="text" name="userame" id="username" placeholder="Username" ng-model="credentials.username"></p>
+<p><label>Password</label><input class="form-control" type="password" name="password" id="password" placeholder="Password" ng-model="credentials.password" ng-blur="hasFocus=false"></p>
+<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form>
+<span>Input focus: {{hasFocus}}</span>
+</div>

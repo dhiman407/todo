@@ -1,0 +1,29 @@
+<div class="home">
+ <a class="btn" data-toggle="modal" data-target="#modal">New Reminder</a>
+ <div>
+ 	<h4>Remaining Todo list</h4>
+ 	<ul>
+ 		<li ng-repeat="todo in todoList track by $index">
+			{{todo.name}} 			
+ 		</li>
+ 	</ul>
+ </div>
+   <div id="modal" role="dialog" class="modal hide fade">
+            <div class="modal-header">
+                Create Todo Reminder
+            </div>
+            <div class="modal-body">
+                <label for="todoName" />
+                <input type="text" id="todoName" placeholder="Enter Task" ng-model="item.name"/>
+                <label for="todoTime"/>
+                <input type="time" id="todoTime" placeholder="Enter Time" ng-model="item.time"/>
+                <label for="todoDate"/>
+                <input type="date" id="todoDate" placeholder="Enter Date" ng-model="item.date"/>
+                <label for="todoFrequency"/>
+                <input type="text" id="todoFrequency" placeholder="Enter Frequency" ng-model="item.frequency"/>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary"  data-dismiss="modal" ng-click="saveTodoTask(item)">OK</button>
+            </div>
+    </div>
+</div>
